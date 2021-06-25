@@ -1,3 +1,15 @@
+:root{
+    /* colors */
+    --background-color: #FFC2C0;
+    --button-color    : #141B38;
+    --principal-color : #CA5E5E;
+    --white           : #FFFFFF;
+    --green           : #42ED5F;
+    /* leters */
+    --principal-tipe  :'Rubik', sans-serif;
+    --second-tipe     : 'Karla', sans-serif;
+}
+
 *{
     margin:0;
     padding:0;
@@ -53,14 +65,6 @@ table, tr, td, th, thead, tbody, tfoot{
     clear: both;
     display: block;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    color: black;
-    /* text-transform: uppercase; */
-}
 table , table *{
     display: block;
 }
-
-/* reset basico para que no moleste nada */
