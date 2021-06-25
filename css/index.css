@@ -1,18 +1,56 @@
 body{
-    
+    background-color: var(--background-color);
+    font-family: var(--principal-tipe);
+    color: var(--color);
 }
-
-
 .center{
-    width: 70%;
-    background-color: aqua;
+    width: 90%;
     margin: auto;
+    padding: .4em;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--principal-color);
+
+}
+.frontforms{
+    width: 100%;
+}
+.tabset_tabs{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid var(--principal-color);
 }
-.button{
-    background-color: beige;
+.li{
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-family: var(--second-tipe);
+}
+.fields{
+    display: none;
+}
+.submit_button{
+    padding: 1em 2em;
+    margin: 1em 6em 0 0;
+    border-radius:2em;
+    background-color:var(--button-color);
+    color: var(--white);
+    cursor: pointer;
+}
+.submit_button:hover{
+    background-color: var(--principal-color);
+    transition: all .4s ease;
+}
+.submit{
+    margin: 0 1.5em;
+    font-size: 1.2em;
+    letter-spacing: .8px;
+}
+.li1{
+    display: none;
+}
 
-}

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/reset.css">
     <title>Validator</title>
@@ -14,7 +17,74 @@
     </header>
     <main class="main">
         <div class="center">
-            <button class="button">User</button>
+            <div class="frontforms">
+                <ul class="tabset_tabs">
+                  <li class="li"><a class="a" href="#validate_by_uri" class="active">Mediante URI</a></li>
+                  <li class="li selected"><a class="a" href="#validate_by_upload">Mediante Carga de Archivo</a></li>
+                  <li class="li"><a class="a" href="#validate_by_input">Mediante Entrada directa</a></li>
+                </ul>
+                <div class="fields">
+                    <fieldset id="validate-by-uri" class="tabset_content front">
+                    <legend class="tabset_label">Validar mediante URI</legend>
+                    <form method="get" action="validator">
+                        <p class="instructions">
+                            Introduce la URI de un documento (HTML con CSS o sólo CSS) que desees validar:
+                        </p>
+                        <p>
+                            <label title="Dirección de la página a Validar" for="uri">Dirección:
+                            <input type="text" name="uri" id="uri" size="45" required="">
+                            </label>
+                        </p>
+                    <!-- <p class="submit_button">
+                    <input type="hidden" name="lang" value="es">
+                    <label title="Enviar archivo para su validación">
+                        <input type="submit" value="Check"><a class="submit" href="#"><span>Check</span></a>
+                    </label>
+                    </p> -->
+                        </form>
+                    </fieldset>
+                    <fieldset id="validate-by-upload" class="tabset_content front" >
+                        <legend class="tabset_label">Validar mediante Carga de un Archivo</legend>
+                        <form method="post" enctype="multipart/form-data" action="validator">
+                            <p class="instructions">Elige el documento que desees validar:</p>
+                            <p>
+                                <label title="Elige un Archivo Local para su Carga y Validación" for="file">Archivo CSS local:
+                                    <input type="file" id="file" name="file" size="30" required="">
+                                </label>
+                            </p>
+        <!-- <p class="submit_button">
+        <input type="hidden" name="lang" value="es">
+            <label title="Enviar archivo para su validación">
+            <input type="submit" value="Check"><a class="submit" href="#"><span>Check</span></a>
+            </label>
+        </p> -->       </form>
+                    </fieldset>
+                    <fieldset id="validate-by-input" class="tabset_content front">
+                        <legend class="tabset_label">Validar mediante entrada directa</legend>
+                        <form action="validator" enctype="multipart/form-data" method="post">
+                            <p class="instructions">Introduce el código CSS que desees validar:</p>
+                            <p>
+                                <textarea name="text" rows="12" cols="70" required=""></textarea>
+                            </p>      
+                    <!-- <p class="submit_button">
+                    <input type="hidden" name="lang" value="es">
+                    <label title="Enviar archivo para su validación">
+                        <input type="submit" value="Check" style="display: none;"><a class="submit" href="#"><span>Check</span></a>
+                    </label>
+                    </p> -->
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+
+            <ul class="ul">
+                <p class="submit_button">
+                    <a href="#" class="submit">Generate report</a>
+                     <i class="fas fa-arrow-down"></i>
+                </p>
+                <li class="li1"> <a href="userDasboard/userDashboard.html" class="a1"> HTML & CSS</a></li>
+                <li class="li1"><a href="devDashboard/devDasboard.html" class="a1">JAVA</a></li>
+            </ul>
         </div>
     </main>
     <footer class="footer">
