@@ -1,0 +1,18 @@
+body{
+    
+}
+
+
+.center{
+    width: 70%;
+    background-color: aqua;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.button{
+    background-color: beige;
+
+}
