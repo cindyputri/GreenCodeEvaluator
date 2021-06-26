@@ -10,20 +10,25 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="../css/reset.css">
     <script type="text/javascript" src="js/app.js" defer></script>
+    <script type="text/javascript" src="js/savedata.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <title>Validator</title>
 </head>
 <body>
     <header class="header">
-        <h1 class="h1">Ada Lovelace Validator</h1>
+        <h1 class="h1"><a href="../about._team.html">Ada Lovelace Validator</a></h1>
     </header>
     <main class="main">
         <div class="center">
             <div class="frontforms">
-                <ul class="tabset_tabs">
-                  <li class=""><a class="validate" href="#validate-by-uri" title="Validate by URI" onclick="linkfunctionUri()" >Validate by URI</a></li>
-                  <li class=""><a class="validate" href="#validate-by-upload" title="Validate by File Upload" onclick="linkfunctionUpload()"  >Validate by File Upload</a></li>
-                  <li class=""><a class="validate" href="#validate-by-input" title="Validate by Direct Input" onclick="linkfunctionInput()"  >Validate by Direct Input</a></li>
-                </ul>
+                <div class="nav">
+                    <ul class="tabset_tabs">
+                        <li class="tabs"><a class="validate" href="#validate-by-uri" title="Validate by URI" onclick="linkfunctionUri()">Validate by URI</a></li>
+                        <li class="tabs"><a class="validate" href="#validate-by-upload" title="Validate by File Upload" onclick="linkfunctionUpload()">Validate by File Upload</a></li>
+                        <li class="tabs""><a class="validate" href="#validate-by-input" title="Validate by Direct Input" onclick="linkfunctionInput()">Validate by Direct Input</a></li>
+                      </ul>
+                </div>
                 <div class="fields">
                     <fieldset id="validate-by-uri" class="tabset_content front">
                     <legend class="tabset_label">Validate by URI</legend>
@@ -54,19 +59,20 @@
                         <form action="validator" enctype="multipart/form-data" method="post">
                             <label class="label" for="instructions" class="instructions">Enter the CSS code you want to validate:</label>
                             <p class="p">
-                                <textarea class="input" name="text" rows="12" cols="70" required=""></textarea>
+                                <textarea class="input" name="text" rows="12" cols="70" required="" id="inputData"></textarea>
                             </p>      
                         </form>
                     </fieldset>
                 </div>
                 <div class="button">
                     <p class="submit_button">
-                        <a href="#" class="submit">Generate report</a>
+                       <a href="#" class="submit">Generate report</a>
                     </p>
                     <i class="fas fa-arrow-down">
                         <ul class="ul">
-                            <li class="li"> <a href="../userDasboard/userDashboard.html" class="a1"> HTML & CSS</a></li>
-                            <li class="li"><a href="../devDashboard/devDasboard.html" class="a1">JAVA</a></li>
+                            <li class="li"><a href="../userDasboard/userDashboard.html" class="a1" onclick="saveData()"> HTML & CSS</a> </li>
+                            <li class="li"><a href="../devDashboard/devDasboard.html" class="a1"  onclick="saveData()">JAVA</a> </li>
+            
                         </ul>
                     </i>
                 </div>
@@ -74,7 +80,10 @@
         </div>
     </main>
     <footer class="footer">
-        <h2 class="h2">HER HACKATHON</h2>
+        <h2 class="h2">
+            <p class="footer_p"><i class="fas fa-less-than"></i>HER</p>
+            <p class="footer_p1">HACKATHON<i class="fas fa-greater-than"></i></p>
+        </h2>
     </footer>
 
 </body>
