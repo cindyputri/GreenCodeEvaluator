@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+
+
+  <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script>
       function goBack() {
         window.history.back();
+      }
+
+      function numberGenerator(){
+        return Math.floor(Math.random() * 5);
       }
 
       function capturarDev(){
@@ -16,7 +22,8 @@
 
 
       function capturar1() {
-        var clas=document.getElementById("clas").value;
+        var clas=numberGenerator();
+        while(clas<1) clas=numberGenerator();
         var cla=document.getElementById("cla");
         if(clas==1){
             cla.style.width="25%";
@@ -39,7 +46,8 @@
     }
 
     function capturar2() {
-        var decs=document.getElementById("decs").value;
+        var decs=numberGenerator();
+        while(decs<1) decs=numberGenerator();
         var dec=document.getElementById("dec");
         if(decs==1){
             dec.style.width="25%";
@@ -60,7 +68,8 @@
     }
 
     function capturar3() {
-        var strs=document.getElementById("strs").value;
+        var strs=numberGenerator();
+        while(strs<1) strs=numberGenerator();
         var str=document.getElementById("str");
         if(strs==1){
             str.style.width="25%";
@@ -91,16 +100,8 @@
     <link rel="stylesheet" href="css/index.css">
     <title>BackEnd Validator</title>
 </head>
-<body>
+<body onload="capturarDev()">
 
-
-  <form id="form1">
-    Class name: <input type="text" value="clas" id="clas" class="formulario">
-    Declaration: <input type="text" value="decs" id="decs" class="formulario">
-    Structure: <input type="text" value="strs" id="strs" class="formulario">
-    </form>
-
-    <button type="button" class="btn btn-primary col-2" onclick="capturarDev()">Capturar</button>
   
   <div class="container-fluid mx-auto">
       <h3>BackEnd Validator: </h3>

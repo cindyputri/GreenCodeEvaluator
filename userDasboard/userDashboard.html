@@ -8,6 +8,10 @@
         window.history.back();
       }
 
+      function numberGenerator(){
+        return Math.floor(Math.random() * 5);
+      }
+
       function capturar(){
         capturar1();
         capturar2();
@@ -16,8 +20,10 @@
       }
 
 
+
       function capturar1() {
-        var color=document.getElementById("colors").value;
+        var color=numberGenerator();
+        while(color<1) color=numberGenerator();
         var colors=document.getElementById("pcolors");
         if(color==1){
             colors.style.width="25%";
@@ -40,7 +46,9 @@
     }
 
     function capturar2() {
-        var sub=document.getElementById("sub").value;
+
+        var sub=numberGenerator();
+        while(sub<1) sub=numberGenerator();
         var subs=document.getElementById("psubs");
         if(sub==1){
           subs.style.width="25%";
@@ -61,7 +69,8 @@
     }
 
     function capturar3() {
-        var adap=document.getElementById("adap").value;
+        var adap=numberGenerator();
+        while(adap<1) adap=numberGenerator();
         var padap=document.getElementById("padap");
         if(adap==1){
           padap.style.width="25%";
@@ -82,7 +91,8 @@
     }
 
     function capturar4() {
-        var img=document.getElementById("img").value;
+        var img=numberGenerator();
+        while(img<1) img=numberGenerator();
         var pimg=document.getElementById("pimg");
         if(img==1){
           pimg.style.width="25%";
@@ -111,17 +121,8 @@
     <link rel="stylesheet" href="css/index.css">
     <title>FrontEnd Validator</title>
 </head>
-<body>
+<body onload="capturar()">
 
-
-  <form id="form1">
-    Colors: <input type="text" value="colors" id="colors" class="formulario">
-    Subtitles: <input type="text" value="sub" id="sub" class="formulario">
-    Adaptability: <input type="text" value="adap" id="adap" class="formulario">
-    Images: <input type="text" value="img" id="img" class="formulario">
-    </form>
-
-    <button type="button" class="btn btn-primary col-2" onclick="capturar()">Color</button>
   
   <div class="container-fluid mx-auto">
       <h3>FrontEnd Validator: </h3>
