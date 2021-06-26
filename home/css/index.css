@@ -1,8 +1,3 @@
-body{
-    background-color: var(--background-color);
-    font-family: var(--principal-tipe);
-    color: var(--color);
-}
 .center{
     width: 90%;
     margin: auto;
@@ -11,8 +6,6 @@ body{
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--principal-color);
-
 }
 .frontforms{
     width: 100%;
@@ -25,32 +18,82 @@ body{
     cursor: pointer;
     border-bottom: 1px solid var(--principal-color);
 }
-.li{
+.validate{
     padding: 0.5em;
     font-size: 1.5em;
     font-family: var(--second-tipe);
+    /* position: relative; */
 }
-.fields{
+.validate:hover{
+    color:var(--principal-color);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.tabset_content {
+    padding: 1em;
+    margin: 1em auto;
+    background-color: lightblue;
+}
+
+#validate-by-uri{
+    /* display: none; */
+}
+
+#validate-by-upload{
     display: none;
 }
-.submit_button{
+#validate-by-input{
+    display: none;
+
+}
+.button{
+    max-width: 14em;
     padding: 1em 2em;
-    margin: 1em 6em 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em auto;
     border-radius:2em;
     background-color:var(--button-color);
     color: var(--white);
     cursor: pointer;
 }
-.submit_button:hover{
-    background-color: var(--principal-color);
+
+.fa-arrow-down{
+    position: relative;
+}
+.fa-arrow-down:hover{
+   color:var(--principal-color);
+   transition: all .4s ease;
+   cursor: pointer;
+   pointer-events: auto;
+
+}
+.fa-arrow-down:hover .ul{
+   transition: all 1s ease;
+    opacity: 1;
+    pointer-events: auto;
+   
+}
+.ul{
+    width: 100%;
+    max-width: 14em;
+    transform: translate(-9.5em, 1em);
+    padding: .8em;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+.li{
+    margin: .3em 0;
+    color: var(--color);
+    pointer-events: auto;
+}
+.li:hover{
+    color:var(--principal-color);
     transition: all .4s ease;
-}
-.submit{
-    margin: 0 1.5em;
-    font-size: 1.2em;
-    letter-spacing: .8px;
-}
-.li1{
-    display: none;
+    cursor: pointer;
+
 }
 
