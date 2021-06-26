@@ -7,67 +7,175 @@
       function goBack() {
         window.history.back();
       }
+
+      function capturar(){
+        capturar1();
+        capturar2();
+        capturar3();
+        capturar4();
+      }
+
+
+      function capturar1() {
+        var color=document.getElementById("colors").value;
+        var colors=document.getElementById("pcolors");
+        if(color==1){
+            colors.style.width="25%";
+            colors.style.backgroundColor="#FA320E";
+        }
+        if(color==2){
+            colors.style.width="50%";
+            colors.style.backgroundColor="#FA9F0E";
+        }
+        if(color==3){
+            colors.style.width="75%";
+            colors.style.backgroundColor="#FAEB0E";
+        }
+        if(color==4){
+            colors.style.width="100%";
+            colors.style.backgroundColor="#24FA0E";
+        }
+
+        
+    }
+
+    function capturar2() {
+        var sub=document.getElementById("sub").value;
+        var subs=document.getElementById("psubs");
+        if(sub==1){
+          subs.style.width="25%";
+          subs.style.backgroundColor="#FA320E";
+        }
+        if(sub==2){
+          subs.style.width="50%";
+          subs.style.backgroundColor="#FA9F0E";
+        }
+        if(sub==3){
+          subs.style.width="75%";
+          subs.style.backgroundColor="#FAEB0E";
+        }
+        if(sub==4){
+          subs.style.width="100%";
+          subs.style.backgroundColor="#24FA0E";
+        }
+    }
+
+    function capturar3() {
+        var adap=document.getElementById("adap").value;
+        var padap=document.getElementById("padap");
+        if(adap==1){
+          padap.style.width="25%";
+            padap.style.backgroundColor="#FA320E";
+        }
+        if(adap==2){
+            padap.style.width="50%";
+            padap.style.backgroundColor="#FA9F0E";
+        }
+        if(adap==3){
+            padap.style.width="75%";
+            padap.style.backgroundColor="#FAEB0E";
+        }
+        if(adap==4){
+            padap.style.width="100%";
+            padap.style.backgroundColor="#24FA0E";
+        }
+    }
+
+    function capturar4() {
+        var img=document.getElementById("img").value;
+        var pimg=document.getElementById("pimg");
+        if(img==1){
+          pimg.style.width="25%";
+            pimg.style.backgroundColor="#FA320E";
+        }
+        if(img==2){
+            pimg.style.width="50%";
+            pimg.style.backgroundColor="#FA9F0E";
+        }
+        if(img==3){
+            pimg.style.width="75%";
+            pimg.style.backgroundColor="#FAEB0E";
+        }
+        if(img==4){
+            pimg.style.width="100%";
+            pimg.style.backgroundColor="#24FA0E";
+        }
+    }
+
+      
       </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/reset.css">
-    <title>HTML & CSS Validator</title>
+    <link rel="stylesheet" href="css/index.css">
+    <title>FrontEnd Validator</title>
 </head>
-<body class="container-fluid mx-auto">
+<body>
 
-  <div class="container-fluid mx-auto" id="div">
-      <h3>HTML & CSS Validator: </h3>
+
+  <form id="form1">
+    Colors: <input type="text" value="colors" id="colors" class="formulario">
+    Subtitles: <input type="text" value="sub" id="sub" class="formulario">
+    Adaptability: <input type="text" value="adap" id="adap" class="formulario">
+    Images: <input type="text" value="img" id="img" class="formulario">
+    </form>
+
+    <button type="button" class="btn btn-primary col-2" onclick="capturar()">Color</button>
+  
+  <div class="container-fluid mx-auto">
+      <h3>FrontEnd Validator: </h3>
   
   <div class="row">
       <div class="col-1"></div>
     <div class="col-2">Colors</div>  
       <div class="progress col-8">
-          <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+          <div class="progress-done" role="progressbar" id="pcolors" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
       </div>
       <div class="col-1"></div>
   </div>
 
   <div class="row">
-      <div class="col-1"></div>
-      <div class="col-2">Subtitles</div>  
-        <div class="progress col-8">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
-        </div>
-        <div class="col-1"></div>
+    <div class="col-1"></div>
+  <div class="col-2">Subtitles</div>  
+    <div class="progress col-8">
+        <div class="progress-done" role="progressbar" id="psubs" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
     </div>
+    <div class="col-1"></div>
+</div>
 
-    <div class="row">
-      <div class="col-1"></div>
-      <div class="col-2">Adaptable</div>  
-        <div class="progress col-8">
-            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
-        </div>
-        <div class="col-1"></div>
-    </div>
+<div class="row">
+  <div class="col-1"></div>
+<div class="col-2">Adaptability</div>  
+  <div class="progress col-8">
+      <div class="progress-done" role="progressbar" id="padap" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+  </div>
+  <div class="col-1"></div>
+</div>
 
 
-    <div class="row">
-      <div class="col-1"></div>
-      <div class="col-2">Images</div>  
-        <div class="progress col-8">
-            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
-        </div>
-        <div class="col-1"></div>
-    </div>
+<div class="row">
+  <div class="col-1"></div>
+<div class="col-2">Images</div>  
+  <div class="progress col-8">
+      <div class="progress-done" role="progressbar" id="pimg" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+  </div>
+  <div class="col-1"></div>
+</div>
   
   </div>
 
-  <div class="container-fluid mx-auto" id="div">
+  <div class="container-fluid mx-auto">
       Report:
   </div>
 
+  <div class="container-fluid mx-auto">
   <div class="row" id="button">
     <div class="col-5"></div>
   <button type="button" class="btn btn-primary col-2" onclick="goBack()">Go Back</button>
   <div class="col-5"></div>
     </div>
-
+</div>
 
 </body>
 </html>

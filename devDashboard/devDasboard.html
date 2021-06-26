@@ -4,55 +4,148 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script>
-        function goBack() {
-          window.history.back();
+      function goBack() {
+        window.history.back();
+      }
+
+      function capturarDev(){
+        capturar1();
+        capturar2();
+        capturar3();
+      }
+
+
+      function capturar1() {
+        var clas=document.getElementById("clas").value;
+        var cla=document.getElementById("cla");
+        if(clas==1){
+            cla.style.width="25%";
+            cla.style.backgroundColor="#FA320E";
         }
-        </script>
+        if(clas==2){
+            cla.style.width="50%";
+            cla.style.backgroundColor="#FA9F0E";
+        }
+        if(clas==3){
+            cla.style.width="75%";
+            cla.style.backgroundColor="#FAEB0E";
+        }
+        if(clas==4){
+            cla.style.width="100%";
+            cla.style.backgroundColor="#24FA0E";
+        }
+
+        
+    }
+
+    function capturar2() {
+        var decs=document.getElementById("decs").value;
+        var dec=document.getElementById("dec");
+        if(decs==1){
+            dec.style.width="25%";
+            dec.style.backgroundColor="#FA320E";
+        }
+        if(decs==2){
+            dec.style.width="50%";
+            dec.style.backgroundColor="#FA9F0E";
+        }
+        if(decs==3){
+            dec.style.width="75%";
+            dec.style.backgroundColor="#FAEB0E";
+        }
+        if(decs==4){
+            dec.style.width="100%";
+            dec.style.backgroundColor="#24FA0E";
+        }
+    }
+
+    function capturar3() {
+        var strs=document.getElementById("strs").value;
+        var str=document.getElementById("str");
+        if(strs==1){
+            str.style.width="25%";
+            str.style.backgroundColor="#FA320E";
+        }
+        if(strs==2){
+            str.style.width="50%";
+            str.style.backgroundColor="#FA9F0E";
+        }
+        if(strs==3){
+            str.style.width="75%";
+            str.style.backgroundColor="#FAEB0E";
+        }
+        if(strs==4){
+            str.style.width="100%";
+            str.style.backgroundColor="#24FA0E";
+        }
+    }
+
+   
+
+      
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/reset.css">
-    <title>Java Validator</title>
+    <link rel="stylesheet" href="css/index.css">
+    <title>BackEnd Validator</title>
 </head>
-<body class="container-fluid mx-auto">
-    <div class="container-fluid mx-auto" id="div">
-        <h3>HTML & CSS Validator: </h3>
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-2">Class name</div>  
-        <div class="progress col-8">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
-        </div>
-        <div class="col-1"></div>
-    </div>
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-2">Variables, Interfaces, ...</div>  
-            <div class="progress col-8">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
-            </div>
-            <div class="col-1"></div>
-        </div>
-        <div class="row">
-        <div class="col-1"></div>
-        <div class="col-2">Structure</div>  
-            <div class="progress col-8">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
-            </div>
-            <div class="col-1"></div>
-        </div>
-    </div>
-    <div class="container-fluid mx-auto" id="div">
-        Report:
-    </div>
+<body>
 
 
-    <div class="row" id="button">
-        <div class="col-5"></div>
-      <button type="button" class="btn btn-primary col-2" onclick="goBack()">Go Back</button>
-      <div class="col-5"></div>
-        </div>
+  <form id="form1">
+    Class name: <input type="text" value="clas" id="clas" class="formulario">
+    Declaration: <input type="text" value="decs" id="decs" class="formulario">
+    Structure: <input type="text" value="strs" id="strs" class="formulario">
+    </form>
 
+    <button type="button" class="btn btn-primary col-2" onclick="capturarDev()">Capturar</button>
+  
+  <div class="container-fluid mx-auto">
+      <h3>BackEnd Validator: </h3>
+  
+  <div class="row">
+      <div class="col-1"></div>
+    <div class="col-2">Class name</div>  
+      <div class="progress col-8">
+          <div class="progress-done" role="progressbar" id="cla" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+      </div>
+      <div class="col-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-1"></div>
+  <div class="col-2">Declaration of variables</div>  
+    <div class="progress col-8">
+        <div class="progress-done" role="progressbar" id="dec" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+    </div>
+    <div class="col-1"></div>
+</div>
+
+<div class="row">
+  <div class="col-1"></div>
+<div class="col-2">Structure</div>  
+  <div class="progress col-8">
+      <div class="progress-done" role="progressbar" id="str" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+  </div>
+  <div class="col-1"></div>
+</div>
+
+
+  </div>
+
+  <div class="container-fluid mx-auto">
+      Report:
+  </div>
+
+  <div class="container-fluid mx-auto">
+  <div class="row" id="button">
+    <div class="col-5"></div>
+  <button type="button" class="btn btn-primary col-2" onclick="goBack()">Go Back</button>
+  <div class="col-5"></div>
+    </div>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,25 @@
+.mx-auto{
+    padding: 2em 1em 1em 2em;
+    background-color: lightcyan;
+}
+
+h3{
+    padding-bottom: 1em;
+}
+
+.progress{
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    height: 30px;
+}
+
+.progress-done{
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    height: 100%;
+    width: 300px;
+}
+
+.row{
+    padding: 1em;
+}
