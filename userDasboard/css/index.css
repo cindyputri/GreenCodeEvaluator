@@ -20,6 +20,23 @@
     font-size: inherit;
     font-weight: inherit;
     animation: showTitle 2s ease 1 both 1s;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen{
+    width: 15%;
+    border-radius: 50%;
+    transform: translateX(-5em);
+}
+.img{
+    border-radius: 50%;
+}
+.a_logo{
+    transform: translateX(-4em);
+
 }
 
 .h3{
@@ -30,7 +47,7 @@
     letter-spacing: 2px;
 }
 .center{
-    padding-top: 8em;
+    padding-top: 9.5em;
     display: flex;
     flex-flow: column;
     justify-content: center;
