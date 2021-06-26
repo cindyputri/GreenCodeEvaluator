@@ -12,6 +12,15 @@
         return Math.floor(Math.random() * 5);
       }
 
+
+      function number(){
+        return Math.floor(Math.random() * 3);
+      }
+
+      function number2(){
+        return Math.floor(Math.random() * 4);
+      }
+
       function capturar(){
         capturar1();
         capturar2();
@@ -19,7 +28,55 @@
         capturar4();
       }
 
+      function reportColors(){
+          var opc=number();
+          while(opc<1)opc=number();
+         if(opc==1){
+            document.getElementById("report1").innerHTML="Colors:<br>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.<br>";
+          }
 
+          if(opc==2){
+            document.getElementById("report1").innerHTML="Colors:<br>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.<br>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.<br>";
+          }
+      }
+
+
+      function reportSubtitles(){
+          var opc=number2();
+          while(opc<1)opc=number2();
+         if(opc==1){
+            document.getElementById("report2").innerHTML="Subtitles:<br>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 7:1.<br>";
+          }
+
+          if(opc==2){
+            document.getElementById("report2").innerHTML="Subtitles:<br>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 7:1.<br>Error: The heading structure is not logically nested. This h4 element should be an h3 to be properly nested.<br>";
+          }
+
+          if(opc==3){
+            document.getElementById("report2").innerHTML="Subtitles:<br>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 7:1.<br>Error: The heading structure is not logically nested. This h4 element should be an h3 to be properly nested.<br>Error: The heading structure is not logically nested. This h2 element appears to be the primary document heading, so should be an h1 element.<br>";
+          }
+          
+      }
+
+
+      function reportAdaptability(){
+          var opc=number();
+         if(opc==1){
+            document.getElementById("report3").innerHTML="Adaptability:<br>Error: Anchor element found with a valid href attribute, but no link content has been supplied.<br>";
+          }
+      }
+
+      function reportImages(){
+          var opc=number();
+          while(opc<1)opc=number();
+         if(opc==1){
+            document.getElementById("report4").innerHTML="Images:<br>Warning: This element's text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 7:1.<br>";
+          }
+
+          if(opc==2){
+            document.getElementById("report4").innerHTML="Images:<br>Warning: This element's text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 7:1.<br>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.<br>";
+          }
+      }
 
       function capturar1() {
         var color=numberGenerator();
@@ -32,14 +89,17 @@
         if(color==2){
             colors.style.width="50%";
             colors.style.backgroundColor="#FA9F0E";
+            reportColors();
         }
         if(color==3){
             colors.style.width="75%";
             colors.style.backgroundColor="#FAEB0E";
+            reportColors();
         }
         if(color==4){
             colors.style.width="100%";
             colors.style.backgroundColor="#24FA0E";
+            reportColors();
         }
 
         
@@ -53,14 +113,17 @@
         if(sub==1){
           subs.style.width="25%";
           subs.style.backgroundColor="#FA320E";
+          reportSubtitles();
         }
         if(sub==2){
           subs.style.width="50%";
           subs.style.backgroundColor="#FA9F0E";
+          reportSubtitles();
         }
         if(sub==3){
           subs.style.width="75%";
           subs.style.backgroundColor="#FAEB0E";
+          reportSubtitles();
         }
         if(sub==4){
           subs.style.width="100%";
@@ -75,14 +138,17 @@
         if(adap==1){
           padap.style.width="25%";
             padap.style.backgroundColor="#FA320E";
+            reportAdaptability();
         }
         if(adap==2){
             padap.style.width="50%";
             padap.style.backgroundColor="#FA9F0E";
+            reportAdaptability();
         }
         if(adap==3){
             padap.style.width="75%";
             padap.style.backgroundColor="#FAEB0E";
+            reportAdaptability();
         }
         if(adap==4){
             padap.style.width="100%";
@@ -97,19 +163,25 @@
         if(img==1){
           pimg.style.width="25%";
             pimg.style.backgroundColor="#FA320E";
+            reportImages();
         }
         if(img==2){
             pimg.style.width="50%";
             pimg.style.backgroundColor="#FA9F0E";
+            reportImages();
         }
         if(img==3){
             pimg.style.width="75%";
             pimg.style.backgroundColor="#FAEB0E";
+            reportImages();
         }
         if(img==4){
             pimg.style.width="100%";
             pimg.style.backgroundColor="#24FA0E";
+            reportImages();
         }
+
+      
     }
 
       
@@ -163,6 +235,45 @@
       <div class="section">
           <p class="p">Report:</p> 
       </div>
+      <div class="col-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-1"></div>
+  <div class="col-2">Subtitles</div>  
+    <div class="progress col-8">
+        <div class="progress-done" role="progressbar" id="psubs" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+    </div>
+    <div class="col-1"></div>
+</div>
+
+<div class="row">
+  <div class="col-1"></div>
+<div class="col-2">Adaptability</div>  
+  <div class="progress col-8">
+      <div class="progress-done" role="progressbar" id="padap" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+  </div>
+  <div class="col-1"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-1"></div>
+<div class="col-2">Images</div>  
+  <div class="progress col-8">
+      <div class="progress-done" role="progressbar" id="pimg" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+  </div>
+  <div class="col-1"></div>
+</div>
+  
+  </div>
+
+  <div class="container-fluid mx-auto" >
+      <h3>Report:</h3>
+      <div class="report" id="report1"></div>
+      <div class="report" id="report2"></div>
+      <div class="report" id="report3"></div>
+      <div class="report" id="report4"></div>
   </div>
 </main>
 <footer class="footer">
