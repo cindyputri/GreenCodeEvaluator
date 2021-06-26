@@ -1,6 +1,7 @@
 :root{
     /* colors */
-    --background-color: #FFC2C0;
+    --background-color: #ffd9d8;
+    --nav-background  : #ffc8c6;
     --button-color    : #141B38;
     --principal-color : #CA5E5E;
     --color           : #2a397ed7;
@@ -8,7 +9,7 @@
     --green           : #42ED5F;
     /* leters */
     --principal-tipe  :'Rubik', sans-serif;
-    --second-tipe     : 'Karla', sans-serif;
+    --second-tipe     :'Karla', sans-serif;
 }
 
 *{
