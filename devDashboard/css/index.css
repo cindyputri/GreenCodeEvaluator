@@ -1,3 +1,34 @@
+.header{
+    background-color: var(--nav-background);
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 100%;
+    padding: 1em 2em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: show 2s ease 1 both;
+}
+.h1{
+    font-size: inherit;
+    font-weight: inherit;
+    animation: showTitle 2s ease 1 both 1s;
+}
+.center{
+    width: 90%;
+    margin: auto;
+    padding: 9em 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
 .mx-auto{
     padding: 2em 1em 1em 2em;
     background-color: lightcyan;
@@ -22,4 +53,95 @@ h3{
 
 .row{
     padding: 1em;
+}
+
+.footer{
+    background-color: var(--nav-background);
+    height: 8vh;
+    font-size: 1.5em;
+    font-weight: 500;
+    width: 100%;
+    padding: 1em 2em;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    
+}
+.h2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer_p{
+    margin: 0 1em;
+    animation: showLogo1 2s ease 1 both;
+    color: var(--white);
+}
+.footer_p1{
+    animation: showLogo2 2s ease 1 both, neonAnim 3s alternate-reverse infinite;
+    color: var(--principal-color);
+    margin-bottom: 0;
+}
+.fa-less-than{
+    margin: 0 .3em;
+}
+.fa-greater-than{
+    margin: 0 .3em;
+}
+
+@keyframes show {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+}
+
+@keyframes showTitle {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+}
+@keyframes showLogo1 {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+@keyframes showLogo2 {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+@keyframes neonAnim {
+    from {
+        text-shadow:
+          0 0 14px rgba(202, 94, 94, .7),
+          0 0 44px rgba(202, 94, 94, .7),
+          0 0 104px rgba(202, 94, 94, .7);
+      }
+      to {
+        text-shadow:
+          0 0 9px rgba(202, 94, 94, .7),
+          0 0 24px rgba(202, 94, 94, .7),
+          0 0 64px rgba(202, 94, 94, .7);
+      }
 }

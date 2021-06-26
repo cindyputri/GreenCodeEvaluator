@@ -102,51 +102,65 @@
 </head>
 <body onload="capturarDev()">
 
+<body>
+  <header class="header">
+    <h1 class="h1"><a href="../about._team.html">Ada Lovelace Validator</a></h1>
+</header>
+<main class="main">
+  <div class="center">
   
-  <div class="container-fluid mx-auto">
-      <h3>BackEnd Validator: </h3>
+    <div class="container-fluid mx-auto">
+        <h3>BackEnd Validator: </h3>
+    
+    <div class="row">
+        <div class="col-1"></div>
+      <div class="col-2">Class name</div>  
+        <div class="progress col-8">
+            <div class="progress-done" role="progressbar" id="cla" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+        </div>
+        <div class="col-1"></div>
+    </div>
   
-  <div class="row">
+    <div class="row">
       <div class="col-1"></div>
-    <div class="col-2">Class name</div>  
+    <div class="col-2">Declaration of variables</div>  
       <div class="progress col-8">
-          <div class="progress-done" role="progressbar" id="cla" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+          <div class="progress-done" role="progressbar" id="dec" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
       </div>
       <div class="col-1"></div>
   </div>
-
+  
   <div class="row">
     <div class="col-1"></div>
-  <div class="col-2">Declaration of variables</div>  
+  <div class="col-2">Structure</div>  
     <div class="progress col-8">
-        <div class="progress-done" role="progressbar" id="dec" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+        <div class="progress-done" role="progressbar" id="str" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
     </div>
     <div class="col-1"></div>
-</div>
-
-<div class="row">
-  <div class="col-1"></div>
-<div class="col-2">Structure</div>  
-  <div class="progress col-8">
-      <div class="progress-done" role="progressbar" id="str" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
   </div>
-  <div class="col-1"></div>
-</div>
-
-
-  </div>
-
-  <div class="container-fluid mx-auto">
-      Report:
-  </div>
-
-  <div class="container-fluid mx-auto">
-  <div class="row" id="button">
-    <div class="col-5"></div>
-  <button type="button" class="btn btn-primary col-2" onclick="goBack()">Go Back</button>
-  <div class="col-5"></div>
+  
+  
     </div>
-</div>
-
+  
+    <div class="container-fluid mx-auto">
+        Report:
+    </div>
+  
+    <div class="container-fluid mx-auto">
+    <div class="row" id="button">
+      <div class="col-5"></div>
+    <button type="button" class="btn btn-primary col-2" onclick="goBack()">Go Back</button>
+    <div class="col-5"></div>
+      </div>
+  </div>
+  </div>
+</main>
+  
+<footer class="footer">
+  <h2 class="h2">
+      <p class="footer_p"><i class="fas fa-less-than"></i>HER</p>
+      <p class="footer_p1">HACKATHON<i class="fas fa-greater-than"></i></p>
+  </h2>
+</footer>
 </body>
 </html>
