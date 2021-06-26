@@ -26,14 +26,14 @@
                 </ul>
                 <div class="fields">
                     <fieldset id="validate-by-uri" class="tabset_content front">
-                    <!-- <legend class="tabset_label">Validate by URI</legend> -->
+                    <legend class="tabset_label">Validate by URI</legend>
                         <form method="get" action="validator">
                             <label for="instructions" class="instructions">
                                 Enter the URI of a document (HTML with CSS or CSS only) that you want to validate:
                             </label>
-                            <p>
-                                <label title="Dirección de la página a Validar" for="uri">Adress:
-                                <input type="text" name="uri" id="uri" size="45" required="">
+                            <p class="p">
+                                <label class="label" title="Dirección de la página a Validar" for="uri">Adress:
+                                <input class="input" type="text" name="uri" id="uri" size="45" required="">
                                 </label>
                             </p>
                         </form>
@@ -42,9 +42,9 @@
                     <legend class="tabset_label">Validate by File Upload</legend>
                         <form method="post" enctype="multipart/form-data" action="validator">
                             <label for="instructions" class="instructions">Choose the document you want to validate:</label>
-                            <p>
-                                <label title="Choose a Local File for Upload and Validation" for="file">Local CSS file:
-                                    <input type="file" id="file" name="file" size="30" required="">
+                            <p class="p">
+                                <label class="label" title="Choose a Local File for Upload and Validation" for="file">Local CSS file:
+                                <input class="input" type="file" id="file" name="file" size="30" required="">
                                 </label>
                             </p>
                         </form>
@@ -52,9 +52,9 @@
                     <fieldset id="validate-by-input" class="tabset_content front">
                     <legend class="tabset_label">Validate by Direct Input</legend>
                         <form action="validator" enctype="multipart/form-data" method="post">
-                            <label for="instructions" class="instructions">Enter the CSS code you want to validate:</label>
-                            <p>
-                                <textarea name="text" rows="12" cols="70" required=""></textarea>
+                            <label class="label" for="instructions" class="instructions">Enter the CSS code you want to validate:</label>
+                            <p class="p">
+                                <textarea class="input" name="text" rows="12" cols="70" required=""></textarea>
                             </p>      
                         </form>
                     </fieldset>
