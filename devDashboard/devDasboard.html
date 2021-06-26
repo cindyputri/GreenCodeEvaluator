@@ -14,12 +14,43 @@
         return Math.floor(Math.random() * 5);
       }
 
+      function number(){
+        return Math.floor(Math.random() * 3);
+      }
+
       function capturarDev(){
         capturar1();
         capturar2();
         capturar3();
       }
 
+      function reportClass(){
+          var opc=number();
+         if(opc==1){
+            document.getElementById("report1").innerHTML="Class names:<br>Warning: The class name should be shorter<br>";
+         }
+      }
+
+
+      function reportDeclaration(){
+          var opc=number();
+          while(opc<1)opc=number2();
+         if(opc==1){
+            document.getElementById("report2").innerHTML="Declarations:<br>Warning: The variable has to be used near its declaration<br>";
+          }
+
+          if(opc==2){
+            document.getElementById("report2").innerHTML="Declarations:<br>Warning: The variable has to be used near its declaration <br>Error: Anchor element found with a valid href attribute, but no link content has been supplied.<br> ";
+          }
+
+          
+      }
+
+      function reportStructure(){
+          
+            document.getElementById("report3").innerHTML="Structure:<br>Error: Anchor element found with a valid href attribute, but no link content has been supplied.<br>";
+          
+      }
 
       function capturar1() {
         var clas=numberGenerator();
@@ -28,14 +59,17 @@
         if(clas==1){
             cla.style.width="25%";
             cla.style.backgroundColor="#FA320E";
+            reportClass();
         }
         if(clas==2){
             cla.style.width="50%";
             cla.style.backgroundColor="#FA9F0E";
+            reportClass();
         }
         if(clas==3){
             cla.style.width="75%";
             cla.style.backgroundColor="#FAEB0E";
+            reportClass();
         }
         if(clas==4){
             cla.style.width="100%";
@@ -52,14 +86,17 @@
         if(decs==1){
             dec.style.width="25%";
             dec.style.backgroundColor="#FA320E";
+            reportDeclaration();
         }
         if(decs==2){
             dec.style.width="50%";
             dec.style.backgroundColor="#FA9F0E";
+            reportDeclaration();
         }
         if(decs==3){
             dec.style.width="75%";
             dec.style.backgroundColor="#FAEB0E";
+            reportDeclaration();
         }
         if(decs==4){
             dec.style.width="100%";
@@ -74,14 +111,17 @@
         if(strs==1){
             str.style.width="25%";
             str.style.backgroundColor="#FA320E";
+            reportStructure();
         }
         if(strs==2){
             str.style.width="50%";
             str.style.backgroundColor="#FA9F0E";
+            reportStructure();
         }
         if(strs==3){
             str.style.width="75%";
             str.style.backgroundColor="#FAEB0E";
+            reportStructure();
         }
         if(strs==4){
             str.style.width="100%";
@@ -153,6 +193,15 @@
     <div class="col-5"></div>
       </div>
   </div>
+<<<<<<< HEAD
+=======
+
+  <div class="container-fluid mx-auto">
+    <h3>Report:</h3>
+      <div class="report" id="report1"></div>
+      <div class="report" id="report2"></div>
+      <div class="report" id="report3"></div>
+>>>>>>> 41519a5 (backend report)
   </div>
 </main>
   
