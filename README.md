@@ -1,5 +1,5 @@
 # GreenCodeEvaluator
-Repository for the HerHackathon 2021
+Repository for the HerHackathon 2021 (24-27 June 2021)
 
 
 -	Every participant should have her own GitHub account
@@ -9,3 +9,37 @@ Repository for the HerHackathon 2021
 
 
 Don't know where to get started? Click [here](https://github.com/Daimler/GreenCodeEvaluator/blob/main/HerHackathon-Challenge.pdf).
+
+
+
+https://www.thehackathoncompany.com/herhackathon-2021
+![image](https://user-images.githubusercontent.com/31510478/123529370-c5dc2980-d6ef-11eb-96bf-0ebe8b1b2111.png)
+
+Team Ada Lovelace:
+- Amalia Pita <amaliapitadaveiga@gmail.com>;
+- Cindy Putri <cindy.pr.putri@gmail.com>;
+- Hazel Wat <hazel.h.wat@gmail.com>;
+- Jayde Pearson <developherj@gmail.com>;
+- Maria Tirlea <maria7700mtc@gmail.com>;
+- Paola Moreno <paolamorenoblazquez@outlook.es>;
+- Rita Trindade <rita.caetanotrindade@gmail.com>
+</br>
+
+This repository contains the GUI prototype of the Accessibility Validator Accumulator.
+See the power point presentation for more information.
+
+Concept: https://miro.com/app/board/o9J_l9LQ8Z8=/
+
+Further reading material:
+- W3C Web Content Accessibility Guidelines (WCAG) 2.1 https://www.w3.org/TR/WCAG21/
+- U.S. Section 508 legislation http://section508.gov/index.cfm?fuseAction=stdsdoc
+
+Open source inspiration and additional sources:
+- https://wave.webaim.org/
+- https://github.com/google/Accessibility-Test-Framework-for-Android
+- https://github.com/dequelabs/axe-core-maven-html
+- https://github.com/squizlabs/HTML_CodeSniffer
+- https://github.com/sridharbandi/Java-a11y
+- https://github.com/bbc/color-contrast-checker
+
+
