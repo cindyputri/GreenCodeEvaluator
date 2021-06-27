@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script type="text/javascript" src="js/app.js" defer></script>
+    <script type="text/javascript" src="js/savedata.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <title>Validator</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="h1">
+            <div class="imagen">
+                <img src="../assets/profile1.jpg" alt="Ada" class="img">
+            </div>
+            <a class="a_logo" href="../about._team.html">Ada Lovelace Validator</a>
+        </h1>   
+    </header>
+    <main class="main">
+        <div class="center">
+            <div class="frontforms">
+                <div class="nav">
+                    <ul class="tabset_tabs">
+                        <li class="tabs"><a class="validate" href="#validate-by-uri" title="Validate by URI" onclick="linkfunctionUri()">Validate by URI</a></li>
+                        <li class="tabs"><a class="validate" href="#validate-by-upload" title="Validate by File Upload" onclick="linkfunctionUpload()">Validate by File Upload</a></li>
+                        <li class="tabs""><a class="validate" href="#validate-by-input" title="Validate by Direct Input" onclick="linkfunctionInput()">Validate by Direct Input</a></li>
+                      </ul>
+                </div>
+                <div class="fields">
+                    <fieldset id="validate-by-uri" class="tabset_content front">
+                    <legend class="tabset_label">Validate by URI</legend>
+                        <form method="get" action="validator">
+                            <label for="instructions" class="instructions">
+                                Enter the URI of a document (HTML with CSS or CSS only) that you want to validate:
+                            </label>
+                            <p class="p">
+                                <label class="label" title="Dirección de la página a Validar" for="uri">Adress:
+                                <input class="input" type="text" name="uri" id="uri" size="45" required="">
+                                </label>
+                            </p>
+                        </form>
+                    </fieldset>
+                    <fieldset id="validate-by-upload" class="tabset_content front" >
+                    <legend class="tabset_label">Validate by File Upload</legend>
+                        <form method="post" enctype="multipart/form-data" action="validator">
+                            <label for="instructions" class="instructions">Choose the document you want to validate:</label>
+                            <p class="p">
+                                <label class="label" title="Choose a Local File for Upload and Validation" for="file">Local CSS file:
+                                <input class="input" type="file" id="file" name="file" size="30" required="">
+                                </label>
+                            </p>
+                        </form>
+                    </fieldset>
+                    <fieldset id="validate-by-input" class="tabset_content front">
+                    <legend class="tabset_label">Validate by Direct Input</legend>
+                        <form action="validator" enctype="multipart/form-data" method="post">
+                            <label class="label" for="instructions" class="instructions">Enter the CSS code you want to validate:</label>
+                            <p class="p">
+                                <textarea class="input" name="text" rows="12" cols="70" required="" id="inputData"></textarea>
+                            </p>      
+                        </form>
+                    </fieldset>
+                </div>
+                <div class="button">
+                    <p class="submit_button">
+                       <a href="#" class="submit">Generate report</a>
+                    </p>
+                    <i class="fas fa-arrow-down">
+                        <ul class="ul">
+                            <li class="li"><a href="../userDasboard/userDashboard.html" class="a1" onclick="saveData()"> FrontEnd</a> </li>
+                            <li class="li"><a href="../devDashboard/devDasboard.html" class="a1"  onclick="saveData()">BackEnd</a> </li>
+            
+                        </ul>
+                    </i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <h2 class="h2">
+            <p class="footer_p"><i class="fas fa-less-than"></i>HER</p>
+            <p class="footer_p1">HACKATHON<i class="fas fa-greater-than"></i></p>
+        </h2>
+    </footer>
+
+</body>
+</html>

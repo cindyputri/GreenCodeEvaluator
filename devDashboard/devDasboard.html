@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      function numberGenerator(){
+        return Math.floor(Math.random() * 5);
+      }
+
+      function number(){
+        return Math.floor(Math.random() * 3);
+      }
+
+      function capturarDev(){
+        capturar1();
+        capturar2();
+        capturar3();
+      }
+
+      function reportClass(){
+          var opc=number();
+         if(opc==1){
+            document.getElementById("report1").innerHTML="Class names:<br>Warning: The class name should be shorter<br>";
+         }
+      }
+
+
+      function reportDeclaration(){
+          var opc=number();
+          while(opc<1)opc=number2();
+         if(opc==1){
+            document.getElementById("report2").innerHTML="Declarations:<br>Warning: The variable has to be used near its declaration<br>";
+          }
+
+          if(opc==2){
+            document.getElementById("report2").innerHTML="Declarations:<br>Warning: The variable has to be used near its declaration <br>Error: Anchor element found with a valid href attribute, but no link content has been supplied.<br> ";
+          }
+
+          
+      }
+
+      function reportStructure(){
+          
+            document.getElementById("report3").innerHTML="Structure:<br>Error: Anchor element found with a valid href attribute, but no link content has been supplied.<br>";
+          
+      }
+
+      function capturar1() {
+        var clas=numberGenerator();
+        while(clas<1) clas=numberGenerator();
+        var cla=document.getElementById("cla");
+        if(clas==1){
+            cla.style.width="25%";
+            cla.style.backgroundColor="#FA320E";
+            reportClass();
+        }
+        if(clas==2){
+            cla.style.width="50%";
+            cla.style.backgroundColor="#FA9F0E";
+            reportClass();
+        }
+        if(clas==3){
+            cla.style.width="75%";
+            cla.style.backgroundColor="#FAEB0E";
+            reportClass();
+        }
+        if(clas==4){
+            cla.style.width="100%";
+            cla.style.backgroundColor="#24FA0E";
+        }
+
+        
+    }
+
+    function capturar2() {
+        var decs=numberGenerator();
+        while(decs<1) decs=numberGenerator();
+        var dec=document.getElementById("dec");
+        if(decs==1){
+            dec.style.width="25%";
+            dec.style.backgroundColor="#FA320E";
+            reportDeclaration();
+        }
+        if(decs==2){
+            dec.style.width="50%";
+            dec.style.backgroundColor="#FA9F0E";
+            reportDeclaration();
+        }
+        if(decs==3){
+            dec.style.width="75%";
+            dec.style.backgroundColor="#FAEB0E";
+            reportDeclaration();
+        }
+        if(decs==4){
+            dec.style.width="100%";
+            dec.style.backgroundColor="#24FA0E";
+        }
+    }
+
+    function capturar3() {
+        var strs=numberGenerator();
+        while(strs<1) strs=numberGenerator();
+        var str=document.getElementById("str");
+        if(strs==1){
+            str.style.width="25%";
+            str.style.backgroundColor="#FA320E";
+            reportStructure();
+        }
+        if(strs==2){
+            str.style.width="50%";
+            str.style.backgroundColor="#FA9F0E";
+            reportStructure();
+        }
+        if(strs==3){
+            str.style.width="75%";
+            str.style.backgroundColor="#FAEB0E";
+            reportStructure();
+        }
+        if(strs==4){
+            str.style.width="100%";
+            str.style.backgroundColor="#24FA0E";
+        }
+    }
+
+   
+
+      
+      </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>BackEnd Validator</title>
+</head>
+<body onload="capturarDev()">
+
+<body>
+  <header class="header">
+    <h1 class="h1">
+        <div class="imagen">
+            <img src="../assets/profile1.jpg" alt="Ada" class="img">
+        </div>
+        <a class="a_logo" href="../about._team.html">Ada Lovelace Validator</a>
+    </h1>   
+</header>
+<main class="main">
+  <div class="center">
+    <h3 class="h3">BackEnd Validator: </h3>
+    <div class="section">
+      <div class="row">
+          <div class="p2">Class name</div>  
+          <div class="progress col-8">
+              <div class="progress-done" role="progressbar" id="cla" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+          </div>
+        </div>
+      <div class="row">
+      <div class="p2">Declaration of variables</div>  
+        <div class="progress col-8">
+            <div class="progress-done" role="progressbar" id="dec" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+        </div>
+      </div>
+      <div class="row">
+      <div class="p2">Structure</div>  
+        <div class="progress col-8">
+            <div class="progress-done" role="progressbar" id="str" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <p class="p">Report:</p> 
+    </div>
+   <div class="section">
+        <div class="report" id="report1"></div>
+        <div class="report" id="report2"></div>
+        <div class="report" id="report3"></div>
+    </div>
+</main>
+<footer class="footer">
+  <h2 class="h2">
+      <p class="footer_p"><i class="fas fa-less-than"></i>HER</p>
+      <p class="footer_p1">HACKATHON<i class="fas fa-greater-than"></i></p>
+  </h2>
+</footer>
+</body>
+</html>

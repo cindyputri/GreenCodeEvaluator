@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      function numberGenerator(){
+        return Math.floor(Math.random() * 5);
+      }
+
+
+      function number(){
+        return Math.floor(Math.random() * 3);
+      }
+
+      function number2(){
+        return Math.floor(Math.random() * 4);
+      }
+
+      function capturar(){
+        capturar1();
+        capturar2();
+        capturar3();
+        capturar4();
+      }
+
+      function reportColors(){
+          var opc=number();
+          while(opc<1)opc=number();
+         if(opc==1){
+            document.getElementById("report1").innerHTML="Colors:<br>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.<br>";
+          }
+
+          if(opc==2){
+            document.getElementById("report1").innerHTML="Colors:<br>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.<br>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.<br>";
+          }
+      }
+
+
+      function reportSubtitles(){
+          var opc=number2();
+          while(opc<1)opc=number2();
+         if(opc==1){
+            document.getElementById("report2").innerHTML="Subtitles:<br>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 7:1.<br>";
+          }
+
+          if(opc==2){
+            document.getElementById("report2").innerHTML="Subtitles:<br>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 7:1.<br>Error: The heading structure is not logically nested. This h4 element should be an h3 to be properly nested.<br>";
+          }
+
+          if(opc==3){
+            document.getElementById("report2").innerHTML="Subtitles:<br>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 7:1.<br>Error: The heading structure is not logically nested. This h4 element should be an h3 to be properly nested.<br>Error: The heading structure is not logically nested. This h2 element appears to be the primary document heading, so should be an h1 element.<br>";
+          }
+          
+      }
+
+
+      function reportAdaptability(){
+          var opc=number();
+         if(opc==1){
+            document.getElementById("report3").innerHTML="Adaptability:<br>Error: Anchor element found with a valid href attribute, but no link content has been supplied.<br>";
+          }
+      }
+
+      function reportImages(){
+          var opc=number();
+          while(opc<1)opc=number();
+         if(opc==1){
+            document.getElementById("report4").innerHTML="Images:<br>Warning: This element's text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 7:1.<br>";
+          }
+
+          if(opc==2){
+            document.getElementById("report4").innerHTML="Images:<br>Warning: This element's text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 7:1.<br>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.<br>";
+          }
+      }
+
+      function capturar1() {
+        var color=numberGenerator();
+        while(color<1) color=numberGenerator();
+        var colors=document.getElementById("pcolors");
+        if(color==1){
+            colors.style.width="25%";
+            colors.style.backgroundColor="#FA320E";
+        }
+        if(color==2){
+            colors.style.width="50%";
+            colors.style.backgroundColor="#FA9F0E";
+            reportColors();
+        }
+        if(color==3){
+            colors.style.width="75%";
+            colors.style.backgroundColor="#FAEB0E";
+            reportColors();
+        }
+        if(color==4){
+            colors.style.width="100%";
+            colors.style.backgroundColor="#24FA0E";
+            reportColors();
+        }
+
+        
+    }
+
+    function capturar2() {
+
+        var sub=numberGenerator();
+        while(sub<1) sub=numberGenerator();
+        var subs=document.getElementById("psubs");
+        if(sub==1){
+          subs.style.width="25%";
+          subs.style.backgroundColor="#FA320E";
+          reportSubtitles();
+        }
+        if(sub==2){
+          subs.style.width="50%";
+          subs.style.backgroundColor="#FA9F0E";
+          reportSubtitles();
+        }
+        if(sub==3){
+          subs.style.width="75%";
+          subs.style.backgroundColor="#FAEB0E";
+          reportSubtitles();
+        }
+        if(sub==4){
+          subs.style.width="100%";
+          subs.style.backgroundColor="#24FA0E";
+        }
+    }
+
+    function capturar3() {
+        var adap=numberGenerator();
+        while(adap<1) adap=numberGenerator();
+        var padap=document.getElementById("padap");
+        if(adap==1){
+          padap.style.width="25%";
+            padap.style.backgroundColor="#FA320E";
+            reportAdaptability();
+        }
+        if(adap==2){
+            padap.style.width="50%";
+            padap.style.backgroundColor="#FA9F0E";
+            reportAdaptability();
+        }
+        if(adap==3){
+            padap.style.width="75%";
+            padap.style.backgroundColor="#FAEB0E";
+            reportAdaptability();
+        }
+        if(adap==4){
+            padap.style.width="100%";
+            padap.style.backgroundColor="#24FA0E";
+        }
+    }
+
+    function capturar4() {
+        var img=numberGenerator();
+        while(img<1) img=numberGenerator();
+        var pimg=document.getElementById("pimg");
+        if(img==1){
+          pimg.style.width="25%";
+            pimg.style.backgroundColor="#FA320E";
+            reportImages();
+        }
+        if(img==2){
+            pimg.style.width="50%";
+            pimg.style.backgroundColor="#FA9F0E";
+            reportImages();
+        }
+        if(img==3){
+            pimg.style.width="75%";
+            pimg.style.backgroundColor="#FAEB0E";
+            reportImages();
+        }
+        if(img==4){
+            pimg.style.width="100%";
+            pimg.style.backgroundColor="#24FA0E";
+            reportImages();
+        }
+
+      
+    }
+
+      
+      </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>FrontEnd Validator</title>
+</head>
+<body onload="capturar()">
+  <header class="header">
+    <h1 class="h1">
+        <div class="imagen">
+            <img src="../assets/profile1.jpg" alt="Ada" class="img">
+        </div>
+        <a class="a_logo" href="../about._team.html">Ada Lovelace Validator</a>
+    </h1>   
+</header>
+<main class="main">
+  <div class="center">
+    <h3 class="h3">FrontEnd Validator: </h3>
+      <div class="section">
+        <div class="global">
+          <div class="row">
+            <p class="p2">Colors</p>  
+            <div class="progress col-8">
+                <div class="progress-done" role="progressbar" id="pcolors" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="p2">Subtitles</p>  
+            <div class="progress col-8">
+                <div class="progress-done" role="progressbar" id="psubs" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="p2">Adaptability</p>  
+            <div class="progress col-8">
+              <div class="progress-done" role="progressbar" id="padap" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="p2">Images</p>  
+            <div class="progress col-8">
+              <div class="progress-done" role="progressbar" id="pimg" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> 
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="section">
+          <p class="p">Report:</p> 
+      </div>
+    <div class="section">
+        <div class="report" id="report1"></div>
+        <div class="report" id="report2"></div>
+        <div class="report" id="report3"></div>
+        <div class="report" id="report4"></div>
+    </div>
+</main>
+<footer class="footer">
+  <h2 class="h2">
+      <p class="footer_p"><i class="fas fa-less-than"></i>HER</p>
+      <p class="footer_p1">HACKATHON<i class="fas fa-greater-than"></i></p>
+  </h2>
+</footer>
+</body>
+</html>
